@@ -1,0 +1,164 @@
+@import 'variables';
+@import 'mixins';
+
+.case-studies {
+    background-color: white;
+    color: $text-muted;
+    padding: 80px 0;
+    font-family: $font-style;
+
+    @include large-responsive {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-weight: $font-weight-big;
+        font-size: 34px;
+        font-family: $font-style-heading;
+        color: $bg-dark;
+        margin-bottom: 12px;
+    }
+
+    .text-center {
+        margin-bottom: 60px;
+        p {
+            line-height: 1.714rem;
+            max-width: 570px;
+            letter-spacing: 0.01rem;
+        }
+
+        @include large-responsive {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.case-item {
+    margin-bottom: 80px;
+    font-family: $font-style-heading;
+
+    .divimg {
+        padding-left: 0;
+        padding-right: 0;
+
+        @include large-responsive {
+            max-width: 80%;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+    }
+
+    .divwork1 {
+        padding-left: 0;
+        padding-right: 26px;
+
+        @include large-responsive {
+            margin: 0 auto;
+            padding-right: 0px;
+            text-align: center;
+            max-width: 80%;
+        }
+    }
+
+    .divwork2 {
+        padding-right: 0;
+        padding-left: 32px;
+
+        @include large-responsive {
+            margin: 0 auto;
+            padding-left: 0px;
+            text-align: center;
+            max-width: 80%;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .badge {
+        font-family: $font-style;
+        font-weight: 700;
+        font-size: 0.857rem;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        margin-bottom: 12px;
+        font-family: $font-style-heading;
+        font-weight: $font-weight-big;
+        color: $bg-dark;
+    }
+
+    p {
+        font-weight: $font-weight-small;
+        color: $text-muted;
+        margin-bottom: 40px;
+    }
+
+    button {
+        @extend %btn-style;
+        font-size: 0.875rem;
+        padding: 10px 24px;
+        transition: all 0.35s ease;
+    }
+
+    .btn-warning {
+        background-color: #FFA217;
+        color: white;
+        transition: all 0.35 ease;
+
+        &:hover {
+            background-color: draken(#FFA217, 10%);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .btn-primary {
+        background-color: #000AFF;
+        color: white;
+
+        &:hover {
+            background-color: draken(#000AFF, 10%);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+    }
+
+    .btn-info {
+        background-color: #2AB090;
+        color: white;
+
+        &:hover {
+            background-color: draken(#2AB090, 10%);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+    }
+
+}
+.case-item:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.badge-fintech {
+    background-color: #FFF6E9;
+    color: #FFA217;
+}
+
+.badge-edtech {
+    background-color: #D0E6FF;
+    color: #000AFF;
+}
+
+.badge-pharma {
+    background-color: #E0FFF8;
+    color: #2AB090;
+}

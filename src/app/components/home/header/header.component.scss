@@ -1,0 +1,75 @@
+@import 'variables';
+@import 'mixins';
+
+// nav
+.header {
+  background-color: $bgc-header;
+  color: $bgc-header;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0 84px;
+  margin-bottom: 80px;
+
+  @include xlarge-responsive {
+    padding: 0 28px;
+  }
+  @include large-responsive {
+    margin-bottom: 48px;
+  }
+}
+
+.navbar {
+  width: 100%;
+  padding: 24px 0 2rem;
+  background-color: #1b1b1b;
+
+  .nav {
+    display: flex;
+    gap: 58px;
+
+    > .nav-item > a {
+      padding: 8px;
+      color: $text-muted;
+      font-family: $font-style;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.35s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .icon {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: $text-muted;
+      cursor: pointer;
+      transition: color 0.35s ease;
+
+      a {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .nav-letter {
+    @include xlarge-responsive {
+      gap: 10px;
+    }
+
+    @include large-responsive {
+      margin-top: 16px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .icon-social {
+    gap: 8px;
+  }
+}

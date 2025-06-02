@@ -1,0 +1,173 @@
+.recent-work {
+  background-color: white;
+  padding: 80px 84px;
+
+  @include large-responsive {
+    padding: 60px 0px;
+  }
+
+  h2 {
+    color: black;
+    font-weight: $font-weight-big;
+    font-size: 2.43rem;
+    font-family: $font-style-heading;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    max-width: 570px;
+    line-height: 1.714;
+    margin-bottom: 60px;
+  }
+
+  .recent-work-swiper {
+
+    .work-item {
+      background: transparent;
+      text-align: left;
+
+      img {
+        width: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        margin-bottom: 40px;
+      }
+
+      @include large-responsive {
+        text-align: center;
+      }
+    }
+
+    .work-item:nth-child(odd) {
+      padding: 0 0 0 96px;
+
+      @include large-responsive {
+        padding: 0;
+      }
+    }
+
+    .work-item:nth-child(even) {
+      padding: 0 96px 0 0;
+
+      @include large-responsive {
+        padding: 0;
+      }
+    }
+
+
+    h3 {
+      color: black;
+      font-family: $font-style-heading;
+      font-weight: 800;
+      font-size: 1.714rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: $font-style;
+      color: $text-muted;
+      line-height: 1.714;
+      margin-bottom: 20px;
+      padding-right: 24px;
+
+      @include large-responsive {
+        padding-right: 0px;
+      }
+    }
+
+    button {
+      font-family: $font-style;
+      @extend %btn-style;
+      background-color: $bgc-green;
+      border: 1px solid $boder-green;
+      color: white;
+      transition: all 0.35s ease;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+  }
+
+
+  .work-item button:hover {
+    background-color: draken($bgc-green, 10%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  }
+
+
+  .swiper-button-prev {
+    left: 0;
+    color: #333;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.35s ease, color 0.35s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: #3bb33b;
+      color: white;
+    }
+
+    &::after {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    @include large-responsive {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    right: 0;
+    color: #333;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.35s ease, color 0.35s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: #3bb33b;
+      color: white;
+    }
+
+    &::after {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    @include large-responsive {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 15px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    opacity: 1;
+    margin: 0 6px;
+    transition: background-color 0.35s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #3bb33b;
+  }
+}

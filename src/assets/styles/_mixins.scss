@@ -1,0 +1,57 @@
+// Mixins
+@mixin btn-shadow-glow($color) {
+  box-shadow: 0 0 15px 3px $color;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Extends
+%btn-style {
+  font-weight: $btn-font-weight;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-family: IBM Plex Mono, monospace;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.35s ease;
+}
+
+@mixin desktopSize{
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin small-responsive {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin medium-responsive {
+  @media (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin large-responsive {
+  @media (max-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin xlarge-responsive {
+  @media (max-width: $breakpoint-xlarge) {
+    @content;
+  }
+}
+
+@mixin xxlarge-responsive {
+  @media (max-width: $breakpoint-xxlarge) {
+    @content;
+  }
+}

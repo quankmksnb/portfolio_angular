@@ -1,0 +1,83 @@
+.get-in-touch {
+    background-color: $bg-dark;
+    padding: 80px 0;
+
+    @include large-responsive {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-weight: $font-weight-big;
+        font-size: 2.43rem;
+        font-family: $font-style-heading;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-weight: $font-weight-small;
+        font-family: $font-style;
+        line-height: 1.714rem;
+        max-width: 570px;
+        margin-bottom: 40px;
+    }
+
+    form {
+        max-width: 480px;
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.get-in-touch form input {
+    height: 40px;
+    padding: 4px 12px;
+}
+
+.get-in-touch form input:focus,
+.get-in-touch form textarea:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+.get-in-touch form button {
+    width: 480px;
+    height: 50px;
+    background-color: #3F8E00;
+    border: 1px solid #62BA1B;
+    color: white;
+
+    &:hover {
+        background-color: #62BA1B;
+        cursor: pointer;
+        transition: background-color 0.35s ease;
+    }
+}
+
+/* Responsive */
+@include small-responsive {
+    .get-in-touch form {
+        max-width: 75vw;
+    }
+
+    .get-in-touch form button {
+        max-width: 75vw;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1B1B1B;
+
+    p {
+        font-family: $font-style;
+        color: $text-muted;
+        padding: 24px 0;
+    }
+}

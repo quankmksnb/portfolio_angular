@@ -1,0 +1,113 @@
+.testimonials {
+  background-color: $bg-dark;
+  padding: 80px 0 20px;
+
+  @include large-responsive {
+    padding-top: 60px;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 2.43rem;
+    font-family: $font-style-heading;
+    margin-bottom: 12px;
+    color: white;
+  }
+
+  .description {
+    max-width: 570px;
+    font-family: $font-style;
+    letter-spacing: 0.01rem;
+    line-height: 1.714;
+    margin-bottom: 60px;
+  }
+
+  .div-testimonial {
+    @include small-responsive {
+      padding: 16px;
+    }
+  }
+
+
+  .testimonial-item {
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    // padding: 30px 0 30px 30px;
+    padding: 30px;
+    min-height: 200px;
+    overflow: visible;
+    margin: 0 15px;
+    transition: all 0.35s ease;
+    margin-bottom: 60px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      padding: 1px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #484848 1.24%, rgba(27, 27, 27, 0) 100%);
+
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      cursor: pointer;
+      box-sizing: border-box;
+      z-index: -1;
+    }
+
+    &:hover {
+      /* Khi hover lên item này */
+      z-index: 10;
+      /* Đảm bảo nổi lên trên */
+      opacity: 1;
+      filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .quote-mark {
+      position: absolute;
+      top: 0;
+      left: 7%;
+      transform: translate(-50%, -50%);
+      background-color: $bg-dark;
+      border-radius: 50%;
+      padding: 0.25rem;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    p {
+      font-family: $font-style;
+      font-size: 1rem;
+      line-height: 1.714;
+      letter-spacing: 0.01rem;
+      margin-bottom: 30px;
+      font-weight: $font-weight-small;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    h6 {
+      font-family: $font-style-heading;
+      font-weight: 700;
+      font-size: 1.286rem;
+      color: white;
+    }
+
+  }
+}

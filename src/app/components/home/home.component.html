@@ -1,0 +1,114 @@
+<section class="home">
+  <app-header></app-header>
+  <!-- Main content -->
+  <section class="container">
+    <section
+      class="row justify-content-between align-items-center profile-intro"
+    >
+      <div class="col-lg-6 col-md-12 intro-text order-2 order-lg-1">
+        <h1>Your Name Here</h1>
+        <p>
+          Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button class="btn" type="button">
+          Let’s get started
+          <svg
+            width="6"
+            height="11"
+            viewBox="0 0 6 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.63335 4.87364L1.51379 0.759206C1.16776 0.413598 0.605566 0.413598 0.259528 0.759206C-0.0865095 1.10481 -0.0865095 1.66631 0.259528 2.01191L3.75196 5.5L0.259528 8.9881C-0.0865095 9.3337 -0.0865095 9.8952 0.259528 10.2408C0.432545 10.4136 0.65957 10.5 0.886652 10.5C1.11373 10.5 1.34078 10.4136 1.51378 10.2408L5.63333 6.12637C5.97937 5.78076 5.97937 5.21927 5.63333 4.87366L5.63335 4.87364Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="col-lg-6 col-md-12 portrait-img order-1 order-lg-2">
+        <img src="assets/img/a_one.png" alt="Portrait" class="rounded-circle" />
+      </div>
+    </section>
+
+    <div class="worked-with">
+      <h6>Worked with</h6>
+      <!-- Màn hình lớn: hiển thị logo hàng ngang -->
+      <div class="d-none d-lg-flex justify-content-between div-logo">
+        <div class="company-logo">
+          <img
+            src="assets/img/logo_one.png"
+            alt="ClickUp Logo"
+            width="82.32"
+            height="20"
+          />
+        </div>
+        <div class="company-logo">
+          <img
+            src="assets/img/logo_two.png"
+            alt="Dropbox Logo"
+            width="94.83"
+            height="22"
+          />
+        </div>
+        <div class="company-logo">
+          <img
+            src="assets/img/logo_three.png"
+            alt="PAYCHEX Logo"
+            width="87.06"
+            height="14"
+          />
+        </div>
+        <div class="company-logo">
+          <img
+            src="assets/img/logo_four.png"
+            alt="Elastic Logo"
+            width="81.4"
+            height="28"
+          />
+        </div>
+        <div class="company-logo">
+          <img
+            src="assets/img/logo_five.png"
+            alt="Stripe Logo"
+            width="60.08"
+            height="25"
+          />
+        </div>
+      </div>
+
+      <!-- Màn hình nhỏ: dùng Swiper slide -->
+      <div class="swiper worked-with-swiper d-lg-none">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="company-logo">
+              <img src="assets/img/logo_one.png" alt="ClickUp Logo" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="company-logo">
+              <img src="assets/img/logo_two.png" alt="Dropbox Logo" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="company-logo">
+              <img src="assets/img/logo_three.png" alt="PAYCHEX Logo" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="company-logo">
+              <img src="assets/img/logo_four.png" alt="Elastic Logo" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="company-logo">
+              <img src="assets/img/logo_five.png" alt="Stripe Logo" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-3 work-with-pagination"></div>
+      </div>
+    </div>
+  </section>
+</section>
