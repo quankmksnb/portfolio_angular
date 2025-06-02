@@ -38,8 +38,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/swiper/swiper-bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              // "node_modules/swiper/swiper-bundle.min.js"
             ],
             //  thêm đường dẫn path scss
             "stylePreprocessorOptions": {

@@ -38,7 +38,7 @@
       color: white;
       border: 1px solid $boder-green;
       box-shadow: 0px 8px 30px 0px #3f8e0080;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.35s ease;
 
       &:hover {
         background-color: darken($primary-color, 10%);

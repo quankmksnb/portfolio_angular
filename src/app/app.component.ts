@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/home/header/header.component';
-import { HomeComponent } from './components/home/home.component';
+import { CaseStudiesComponent } from './components/case-studies/case-studies.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { RecentWorkComponent } from './components/recent-work/recent-work.component';
+import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/portfolio/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, HeaderComponent],
+  imports: [HomeComponent , CaseStudiesComponent, TestimonialsComponent, RecentWorkComponent, GetInTouchComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
