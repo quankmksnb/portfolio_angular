@@ -9,9 +9,20 @@
     </p>
 
     <!-- Swiper -->
-    <div class="swiper recent-work-swiper">
-      <div class="swiper-wrapper">
-        <article class="swiper-slide work-item">
+
+    <swiper-container
+      class="recent-work-swiper"
+      slides-per-view="2"
+      slides-per-group="2"
+      space-between="30"
+      loop="true"
+      navigation="false"
+      pagination='{"clickable": true}'
+      autoplay='{"delay": 2000, "disableOnInteraction": false}'
+      breakpoints='{"0": {"slidesPerView": 1, "slidesPerGroup": 1}, "768": {"slidesPerView": 2, "slidesPerGroup": 2}}'
+    >
+      <swiper-slide>
+        <article class="work-item">
           <a href="#" target="_blank" title="Work 1">
             <img src="assets/img/work_one.jpg" alt="Work 1" class="rounded" />
           </a>
@@ -24,8 +35,10 @@
             Know more &gt;
           </button>
         </article>
+      </swiper-slide>
 
-        <article class="swiper-slide work-item">
+      <swiper-slide>
+        <article class="work-item">
           <a href="#" target="_blank" title="Work 2">
             <img src="assets/img/work_two.jpg" alt="Work 2" class="rounded" />
           </a>
@@ -38,8 +51,10 @@
             Know more &gt;
           </button>
         </article>
+      </swiper-slide>
 
-        <article class="swiper-slide work-item">
+      <swiper-slide>
+        <article class="work-item">
           <a href="#" target="_blank" title="Work 3">
             <img src="assets/img/work_three.png" alt="Work 3" class="rounded" />
           </a>
@@ -52,8 +67,10 @@
             Know more &gt;
           </button>
         </article>
+      </swiper-slide>
 
-        <article class="swiper-slide work-item">
+      <swiper-slide>
+        <article class="work-item">
           <a href="#" target="_blank" title="Work 4">
             <img src="assets/img/work_four.png" alt="Work 4" class="rounded" />
           </a>
@@ -66,7 +83,10 @@
             Know more &gt;
           </button>
         </article>
-        <article class="swiper-slide work-item">
+      </swiper-slide>
+
+      <swiper-slide>
+        <article class="work-item">
           <a href="#" target="_blank" title="Work 5">
             <img src="assets/img/work_five.png" alt="Work 5" class="rounded" />
           </a>
@@ -79,6 +99,9 @@
             Know more &gt;
           </button>
         </article>
+      </swiper-slide>
+
+      <swiper-slide>
         <article class="swiper-slide work-item">
           <a href="#" target="_blank" title="Work 6">
             <img src="assets/img/work_six.png" alt="Work 6" class="rounded" />
@@ -92,11 +115,7 @@
             Know more &gt;
           </button>
         </article>
-      </div>
-
-      <!-- Navigation buttons -->
-      <div class="swiper-button-prev" aria-label="Previous slide"></div>
-      <div class="swiper-button-next" aria-label="Next slide"></div>
-    </div>
+      </swiper-slide>
+    </swiper-container>
   </div>
 </section>

@@ -3,7 +3,7 @@
 
 .recent-work {
   background-color: white;
-  padding: 80px 84px;
+  padding: 80px 182px;
 
   @include large-responsive {
     padding: 60px 0px;
@@ -44,7 +44,7 @@
     }
 
     .work-item:nth-child(odd) {
-      padding: 0 0 0 96px;
+      // padding: 0 0 0 96px;
 
       @include large-responsive {
         padding: 0;
@@ -52,7 +52,7 @@
     }
 
     .work-item:nth-child(even) {
-      padding: 0 96px 0 0;
+      // padding: 0 96px 0 0;
 
       @include large-responsive {
         padding: 0;
@@ -159,6 +159,7 @@
 
   .swiper-pagination {
     bottom: 15px;
+    position: static !important;
   }
 
   .swiper-pagination-bullet {

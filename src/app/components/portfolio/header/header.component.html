@@ -19,12 +19,18 @@
       </button>
       <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu">
         <ul class="nav nav-letter">
+          @for(nav of listNav;track nav){
           <li class="nav-item">
-            <a href="#home-section" role="menuitem" title="Go to Home Section"
-              >Home</a
+            <a
+              routerLink="nav.href"
+              role="menuitem"
+              title="{{ nav?.title ?? nav.label}}"
+              >{{ nav.label }}</a
             >
           </li>
-          <li class="nav-item">
+          }
+
+          <!-- <li class="nav-item">
             <a
               href="#case-studies"
               role="menuitem"
@@ -55,7 +61,7 @@
               title="Go to Get In Touch Section"
               >Get In Touch</a
             >
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- icon -->

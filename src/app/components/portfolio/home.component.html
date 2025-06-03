@@ -6,7 +6,7 @@
       class="row justify-content-between align-items-center profile-intro"
     >
       <div class="col-lg-6 col-md-12 intro-text order-2 order-lg-1">
-        <h1>Your Name Here</h1>
+        <h1>Nguyễn Minh Quân</h1>
         <p>
           Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -78,37 +78,48 @@
         </div>
       </div>
 
-      <!-- Màn hình nhỏ: dùng Swiper slide -->
-      <div class="swiper worked-with-swiper d-lg-none">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="company-logo">
-              <img src="assets/img/logo_one.png" alt="ClickUp Logo" />
-            </div>
+      <!-- Màn hình nhỏ: dùng Swiper Web Components -->
+      <swiper-container
+        class="worked-with-swiper d-lg-none"
+        slides-per-view="2"
+        slides-per-group="2"
+        space-between="10"
+        loop="true"
+        pagination='{"clickable": true}'
+        autoplay='{"delay": 2000, "disableOnInteraction": false}'
+        breakpoints='{
+  "0": {"slidesPerView": 1, "slidesPerGroup": 1},
+  "451": {"slidesPerView": 2, "slidesPerGroup": 2},
+  "992": {"slidesPerView": 0}
+}'
+      >
+        <swiper-slide>
+          <div class="company-logo">
+            <img src="assets/img/logo_one.png" alt="ClickUp Logo" />
           </div>
-          <div class="swiper-slide">
-            <div class="company-logo">
-              <img src="assets/img/logo_two.png" alt="Dropbox Logo" />
-            </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="company-logo">
+            <img src="assets/img/logo_two.png" alt="Dropbox Logo" />
           </div>
-          <div class="swiper-slide">
-            <div class="company-logo">
-              <img src="assets/img/logo_three.png" alt="PAYCHEX Logo" />
-            </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="company-logo">
+            <img src="assets/img/logo_three.png" alt="PAYCHEX Logo" />
           </div>
-          <div class="swiper-slide">
-            <div class="company-logo">
-              <img src="assets/img/logo_four.png" alt="Elastic Logo" />
-            </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="company-logo">
+            <img src="assets/img/logo_four.png" alt="Elastic Logo" />
           </div>
-          <div class="swiper-slide">
-            <div class="company-logo">
-              <img src="assets/img/logo_five.png" alt="Stripe Logo" />
-            </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="company-logo">
+            <img src="assets/img/logo_five.png" alt="Stripe Logo" />
           </div>
-        </div>
+        </swiper-slide>
         <div class="swiper-pagination mt-3 work-with-pagination"></div>
-      </div>
+      </swiper-container>
     </div>
   </section>
 </section>
