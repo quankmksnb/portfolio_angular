@@ -8,8 +8,8 @@ register();
   selector: 'app-home',
   standalone: true,
   imports: [HeaderComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  templateUrl: './portfolio.component.html',
+  styleUrls: ['./portfolio.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],  // Cho phép custom elements
 })
-export class HomeComponent {}
+export class PortfolioComponent {}

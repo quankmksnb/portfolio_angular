@@ -1,0 +1,44 @@
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
+  <div class="container text-center">
+    <h2>Testimonials</h2>
+    <p class="description mx-auto">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="row justify-content-center div-testimonial">
+      @for (testimonials of listTestimonials; track testimonials) {
+      <div
+        class="col-md-5 testimonial-item position-relative text-start d-flex flex-column"
+      >
+        <span class="quote-mark">
+          <svg
+            width="20"
+            height="21"
+            viewBox="0 0 20 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.4 0L4.7 10.6H7.1V20.9H0.4V10.6L2.9 0H6.4ZM18.5 0L16.8 10.6H19.2V20.9H12.5V10.6L15 0H18.5Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+        <p class="testimonial-text">
+          {{ testimonials.description }}
+        </p>
+        <div class="d-flex align-items-center mt-auto">
+          <img
+            src="{{ testimonials.imgHref }}"
+            alt="{{ testimonials.imgAlt }}"
+            class="rounded-circle me-3 testimonial-avatar"
+          />
+          <h6>{{ testimonials.name }}</h6>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

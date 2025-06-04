@@ -1,0 +1,50 @@
+<!-- Recent Work -->
+<section id="recent-work" class="recent-work">
+  <div class="container text-center">
+    <h2 id="recent-work-heading">Recent Work</h2>
+    <p class="description mx-auto">
+      Solving user & business problems since last 15+ years.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <!-- Swiper -->
+
+    <swiper-container
+      class="recent-work-swiper"
+      slides-per-view="2"
+      slides-per-group="2"
+      space-between="30"
+      loop="true"
+      navigation="false"
+      pagination='{"clickable": true}'
+      autoplay='{"delay": 2000, "disableOnInteraction": false}'
+      breakpoints='{"0": {"slidesPerView": 1, "slidesPerGroup": 1}, "768": {"slidesPerView": 2, "slidesPerGroup": 2}}'
+    >
+      @for(workItem of listRecentWork; track workItem) {
+      <swiper-slide>
+        <article class="work-item">
+          <a
+            href="{{ workItem.aHref }}"
+            target="_blank"
+            title="{{ workItem.aTitle }}"
+          >
+            <img
+              src="{{ workItem.imgHref }}"
+              alt="{{ workItem.aTitle }}"
+              class="rounded"
+            />
+          </a>
+          <h3>{{ workItem.heading }}</h3>
+          <p>
+            {{ workItem.description }}
+          </p>
+          <button class="btn btn-success btn-know-more" type="button">
+            {{ workItem.contentButton }} &gt;
+          </button>
+        </article>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

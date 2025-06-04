@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: #9C9C9C;
+  font-family: IBM Plex Mono, monospace;
+}/*# sourceMappingURL=styles.css.map */

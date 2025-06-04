@@ -14,11 +14,11 @@ export class HeaderComponent {
   constructor() {}
   ngOnInit() {
     this.listNav = [
-      { label: 'Home', href: '#home', title: 'Hello' },
-      { label: 'Case Studies', href: '#case-studies' },
-      { label: 'Testimonials', href: '#testimonials' },
-      { label: 'Recent work', href: '#recent-work' },
-      { label: 'Get in touch', href: '#get-in-touch' },
+      { label: 'Home', href: '#home', title: 'home' },
+      { label: 'Case Studies', href: '#case-studies', title: 'Case Studies' },
+      { label: 'Testimonials', href: '#testimonials', title: 'Testimonials' },
+      { label: 'Recent work', href: '#recent-work', title: 'Recent work' },
+      { label: 'Get in touch', href: '#get-in-touch', title: 'Get in touch' },
     ];
   }
 }
