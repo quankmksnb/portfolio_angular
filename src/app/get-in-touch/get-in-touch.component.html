@@ -3,14 +3,13 @@
   class="get-in-touch d-flex justify-content-center align-items-center"
 >
   <div class="container text-center">
-    <h1 class="text-white">Get in touch</h1>
-    <p class="mx-auto">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-
+    <header-flex
+      title="{{ heading.title }}"
+      content="{{ heading.content }}"
+      [titleColor]="heading.titleColor"
+    ></header-flex>
     <!-- form -->
-    <form class="mx-auto">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mx-auto">
       <div class="form-group">
         <label
           for="email"
@@ -24,7 +23,12 @@
           class="form-control"
           placeholder="Please enter your email"
           required
+          formControlName="email"
         />
+        <!-- lỗi email -->
+        <div class="error-message" *ngIf="isFieldInvalid('email')">
+          {{ getErrorMessage("email") }}
+        </div>
       </div>
 
       <div class="form-group">
@@ -40,7 +44,12 @@
           class="form-control"
           placeholder="Enter mobile"
           required
+          formControlName="mobile"
         />
+        <!-- lỗi sđt -->
+        <div class="error-message" *ngIf="isFieldInvalid('mobile')">
+          {{ getErrorMessage("mobile") }}
+        </div>
       </div>
 
       <div class="form-group">
@@ -56,10 +65,16 @@
           rows="5"
           placeholder="Enter your message"
           required
+          formControlName="message"
         ></textarea>
+        <div class="error-message" *ngIf="isFieldInvalid('message')">
+          {{ getErrorMessage("message") }}
+        </div>
+        <!-- đếm ký tự -->
+        <div class="character-count">{{ characterCount() }}/1000 ký tự</div>
       </div>
 
-      <button type="submit" class="btn btn-submit text-white">
+      <button type="submit" appButton [buttonType]="'btn-submit'">
         Submit &gt;
       </button>
     </form>

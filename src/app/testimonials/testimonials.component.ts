@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import TestimonialsModel from './model/testimonials.model';
+import { HeaderComponent } from "../shared/header/header.component";
+import { title } from 'process';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'
 })
@@ -39,5 +41,10 @@ export class TestimonialsComponent {
         name: 'Client Name',
       }
     ];
+  }
+  heading = {
+    title: 'Testimonials',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    titleColor: 'white' as const
   }
 }

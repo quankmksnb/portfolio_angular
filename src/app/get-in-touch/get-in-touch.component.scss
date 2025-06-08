@@ -9,7 +9,7 @@
         padding: 60px 0;
     }
 
-    h1 {
+    h2 {
         font-weight: $font-weight-big;
         font-size: 2.43rem;
         font-family: $font-style-heading;
@@ -29,38 +29,69 @@
 
         .form-group {
             margin-bottom: 20px;
+            text-align: left;
         }
-    }
-}
 
+        // Input và textarea styles
+        input, textarea {
+            height: 40px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
 
-.get-in-touch form input {
-    height: 40px;
-    padding: 4px 12px;
-}
+            &:focus {
+                outline: none;
+                border: 3px solid rgba(0, 123, 255, 0.8);
+                background-color: #f0f8ff;
+                box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+                transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+            }
+        }
 
-.get-in-touch form input:focus,
-.get-in-touch form textarea:focus {
-  outline: none;
-  border: 3px solid rgba(0, 123, 255, 0.8);
-  background-color: #f0f8ff;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-  transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-}
+        textarea {
+            height: auto;
+            min-height: 100px;
+        }
 
+        // Thông báo lỗi
+        .error-message {
+            color: #dc3545;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
 
+        // Đếm ký tự
+        .character-count {
+            text-align: right;
+            font-size: 1rem;
+            color: #666;
+            margin-top: 5px;
+        }
 
-.get-in-touch form button {
-    width: 480px;
-    height: 50px;
-    background-color: #3F8E00;
-    border: 1px solid #62BA1B;
-    color: white;
+        // Submit button
+        button {
+            width: 100%;
+            max-width: 480px;
+            height: 50px;
+            background-color: #3F8E00;
+            border: 1px solid #62BA1B;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
 
-    &:hover {
-        background-color: #62BA1B;
-        cursor: pointer;
-        transition: background-color 0.35s ease;
+            &:hover:not(:disabled) {
+                background-color: #62BA1B;
+                transition: background-color 0.35s ease;
+            }
+
+            // Khi form chưa valid
+            &:disabled {
+                background-color: #ccc;
+                border-color: #ccc;
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+        }
     }
 }
 
@@ -68,9 +99,9 @@
 @include small-responsive {
     .get-in-touch form {
         max-width: 75vw;
-    }
 
-    .get-in-touch form button {
-        max-width: 75vw;
+        button {
+            max-width: 75vw;
+        }
     }
 }

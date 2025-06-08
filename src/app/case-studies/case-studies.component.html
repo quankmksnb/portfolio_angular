@@ -1,14 +1,10 @@
 <!-- Case Studies -->
 <section id="case-studies" class="case-studies">
   <div class="container p-0">
-    <div class="text-center">
-      <h2>Case Studies</h2>
-      <p class="mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-        tempor incididunt ut labore et dolore magna.
-      </p>
-    </div>
+    <header-flex
+      title="{{heading.title}}"
+      content="{{heading.content}}"
+    ></header-flex>
 
     @for(caseStudy of listWorkStudies; track caseStudy) {
     <article class="case-item row justify-content-center align-items-center">
@@ -45,7 +41,7 @@
           <p>{{ caseStudy.description }}</p>
 
           <button
-            [ngClass]="'btn-' + caseStudy.buttonType + ' btn-case-study'"
+            appButton [buttonType]="caseStudy.buttonType"
             type="button"
           >
             {{ caseStudy.contentButton }}

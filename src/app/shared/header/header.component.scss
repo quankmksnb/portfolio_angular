@@ -1,0 +1,16 @@
+@import "variables";
+
+.text-center {
+  h2 {
+    font-weight: $font-weight-big;
+    font-size: 34px;
+    font-family: $font-style-heading;
+    margin-bottom: 12px;
+  }
+  margin-bottom: 60px;
+  p {
+    line-height: 1.714rem;
+    max-width: 570px;
+    letter-spacing: 0.01rem;
+  }
+}

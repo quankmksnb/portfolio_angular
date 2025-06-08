@@ -1,0 +1,52 @@
+<header class="header container">
+  <!-- header navigation -->
+  <nav
+    class="navbar navbar-expand-lg navbar-dark"
+    role="navigation"
+    aria-label="Main navigation"
+  >
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler me-auto order-1"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu">
+        <ul class="nav nav-letter">
+          @for(nav of listNav;track nav){
+          <li class="nav-item">
+            <a
+              [href]="nav.href"
+              role="menuitem"
+              title="{{ nav?.title ?? nav.label }}"
+              >{{ nav.label }}</a
+            >
+          </li>
+          }
+        </ul>
+      </div>
+      <!-- icon -->
+      <ul class="nav icon-social order-2">
+        @for(icon of listIcon; track icon) {
+        <li class="nav-item icon">
+          <a
+            [href]="icon.href"
+            target="_blank"
+            [attr.aria-label]="icon.ariaLabel || icon.title"
+            [attr.title]="icon.title"
+            rel="noopener noreferrer"
+          >
+            <i [class]="icon.iconClass"></i>
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -9,9 +9,16 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PortfolioComponent , CaseStudiesComponent, TestimonialsComponent, RecentWorkComponent, GetInTouchComponent, FooterComponent],
+  imports: [
+    PortfolioComponent,
+    CaseStudiesComponent,
+    TestimonialsComponent,
+    RecentWorkComponent,
+    GetInTouchComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'clone_figma';

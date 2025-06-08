@@ -5,4 +5,5 @@ export default interface RecentWorkModel {
     heading: string;
     description: string;
     contentButton: string;
+    classButton: string;
 }

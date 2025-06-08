@@ -1,15 +1,15 @@
 <!-- Testimonials -->
 <section id="testimonials" class="testimonials">
   <div class="container text-center">
-    <h2>Testimonials</h2>
-    <p class="description mx-auto">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+    <header-flex
+      title="{{ heading.title }}"
+      content="{{ heading.content }}"
+      [titleColor]="heading.titleColor"
+    ></header-flex>
 
     <div class="row justify-content-center div-testimonial">
       @for (testimonials of listTestimonials; track testimonials) {
-      <div
+     <div
         class="col-md-5 testimonial-item position-relative text-start d-flex flex-column"
       >
         <span class="quote-mark">

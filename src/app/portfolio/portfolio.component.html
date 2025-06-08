@@ -1,17 +1,14 @@
 <section class="home">
-  <app-header></app-header>
+  <app-nav></app-nav>
   <!-- Main content -->
   <section class="container">
     <section
       class="row justify-content-between align-items-center profile-intro"
     >
       <div class="col-lg-6 col-md-12 intro-text order-2 order-lg-1">
-        <h1>Nguyễn Minh Quân</h1>
-        <p>
-          Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn" type="button">
+        <h1>{{ info.name }}</h1>
+        <p>{{ info.intro }}</p>
+        <button appButton type="button">
           Let’s get started
           <svg
             width="6"
@@ -34,90 +31,50 @@
 
     <div class="worked-with">
       <h6>Worked with</h6>
-      <!-- Màn hình lớn: hiển thị logo hàng ngang -->
-      <div class="d-none d-lg-flex justify-content-between div-logo">
-        <div class="company-logo">
-          <img
-            src="assets/img/logo_one.png"
-            alt="ClickUp Logo"
-            width="82.32"
-            height="20"
-          />
-        </div>
-        <div class="company-logo">
-          <img
-            src="assets/img/logo_two.png"
-            alt="Dropbox Logo"
-            width="94.83"
-            height="22"
-          />
-        </div>
-        <div class="company-logo">
-          <img
-            src="assets/img/logo_three.png"
-            alt="PAYCHEX Logo"
-            width="87.06"
-            height="14"
-          />
-        </div>
-        <div class="company-logo">
-          <img
-            src="assets/img/logo_four.png"
-            alt="Elastic Logo"
-            width="81.4"
-            height="28"
-          />
-        </div>
-        <div class="company-logo">
-          <img
-            src="assets/img/logo_five.png"
-            alt="Stripe Logo"
-            width="60.08"
-            height="25"
-          />
-        </div>
-      </div>
-
-      <!-- Màn hình nhỏ: dùng Swiper Web Components -->
       <swiper-container
-        class="worked-with-swiper d-lg-none"
+        class="worked-with-swiper"
         slides-per-view="2"
         slides-per-group="2"
         space-between="10"
         loop="true"
-        pagination='{"clickable": true}'
         autoplay='{"delay": 2000, "disableOnInteraction": false}'
         breakpoints='{
-          "0": {"slidesPerView": 1, "slidesPerGroup": 1},
-          "451": {"slidesPerView": 2, "slidesPerGroup": 2},
-          "992": {"slidesPerView": 0}
+          "0": {
+            "slidesPerView": 1, 
+            "slidesPerGroup": 1,
+            "spaceBetween": 10,
+            "autoplay": {"delay": 2000, "disableOnInteraction": false},
+            "pagination": {"clickable": true}
+          },
+          "451": {
+            "slidesPerView": 2, 
+            "slidesPerGroup": 2,
+            "spaceBetween": 10,
+            "autoplay": {"delay": 2000, "disableOnInteraction": false},
+            "pagination": {"clickable": true}
+          },
+          "992": {
+            "slidesPerView": 5, 
+            "slidesPerGroup": 5,
+            "spaceBetween": 20,
+            "autoplay": false,
+            "pagination": false,
+            "allowTouchMove": false
+          }
         }'
       >
+        @for(logo of listLogo; track logo){
         <swiper-slide>
           <div class="company-logo">
-            <img src="assets/img/logo_one.png" alt="ClickUp Logo" />
+            <img
+              [src]="logo.href"
+              [alt]="logo.title"
+              [width]="logo.width"
+              [height]="logo.height"
+            />
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="company-logo">
-            <img src="assets/img/logo_two.png" alt="Dropbox Logo" />
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="company-logo">
-            <img src="assets/img/logo_three.png" alt="PAYCHEX Logo" />
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="company-logo">
-            <img src="assets/img/logo_four.png" alt="Elastic Logo" />
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="company-logo">
-            <img src="assets/img/logo_five.png" alt="Stripe Logo" />
-          </div>
-        </swiper-slide>
+        }
         <div class="swiper-pagination mt-3 work-with-pagination"></div>
       </swiper-container>
     </div>
